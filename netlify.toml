@@ -1,0 +1,6 @@
+[build]
+  # No compile step is needed; the API is deployed as a Netlify Function.
+  # This overrides the invalid "server.js" build command set in the Netlify UI.
+  command = "echo 'No build step required'"
+  publish = "public"
+  functions = "netlify/functions"
