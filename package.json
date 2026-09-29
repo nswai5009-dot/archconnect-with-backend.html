@@ -2,11 +2,21 @@
   "name": "archconnect-backend",
   "version": "1.0.0",
   "description": "ArchConnect Backend",
-  "main": "server.js",
+  "main": "netlify/functions/api.mts",
   "scripts": {
-    "start": "node server.js"
+    "start": "netlify dev --port 8889",
+    "db:generate": "drizzle-kit generate"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "dependencies": {
+    "@netlify/database": "^2.0.1",
+    "@netlify/functions": "^6.0.0",
+    "drizzle-orm": "^1.0.0-beta.22"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^1.0.0-beta.22"
+  },
+  "type": "module"
 }
